@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme {
+  --desc-meal-color: #1d1616;
+  --modal-inset: 15% 0 0 0;
+  --meals-cols: repeat(auto-fill, minmax(12rem, 1fr));
+}
+
+@layer base {
+  body {
+    @apply min-h-screen bg-slate-50;
+  }
+}
