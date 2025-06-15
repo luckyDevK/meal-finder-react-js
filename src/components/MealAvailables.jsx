@@ -4,7 +4,7 @@ function Meal({ onOpenModal, mealThumb, mealTitle, mealId }) {
   return (
     <>
       <div
-        className="relative aspect-square border-slate-800 border-6 rounded-tr-md rounded-tl-md group text-center"
+        className="relative aspect-square border-slate-800 border-6 max-w-50 rounded-tr-md rounded-tl-md group text-center"
         onClick={() => onOpenModal(mealId)}
       >
         <img
@@ -12,7 +12,7 @@ function Meal({ onOpenModal, mealThumb, mealTitle, mealId }) {
           alt="food img"
           className="w-full h-64 md:h-full object-cover object-center"
         />
-        <h1 className="absolute inset-0 bg-[var(--desc-meal-color)] opacity-0 transition-opacity ease-in group-hover:opacity-60 capitalize font-semibold text-2xl text-white z-20 flex items-center  justify-center">
+        <h1 className="absolute px-1 inset-0 bg-[var(--desc-meal-color)] opacity-0 transition-opacity ease-in group-hover:opacity-60 capitalize font-semibold text-2xl text-white z-20 flex items-center  justify-center">
           {mealTitle}
         </h1>
       </div>
@@ -23,7 +23,7 @@ function Meal({ onOpenModal, mealThumb, mealTitle, mealId }) {
 export default function MealAvailables({ onOpenModal, mealsData }) {
   return (
     <>
-      <div className="w-4/5 grid grid-cols-(--meals-cols) mt-8 gap-5 place-items-center place-content-center max-w-[60rem] cursor-pointer">
+      <div className="w-4/5 grid grid-cols-(--meals-cols)  mt-8 gap-5 place-items-center place-content-center max-w-[60rem] cursor-pointer">
         {mealsData.map((meal) => (
           <Meal
             key={meal.idMeal}

@@ -12,7 +12,7 @@ import { getRandomMeal, searchMeal } from "./http";
 function App() {
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [currIdMeal, setcurrIdMeal] = useState(null);
+  const [currIdMeal, setCurrIdMeal] = useState(null);
 
   const {
     data: meals,
@@ -68,12 +68,12 @@ function App() {
   }
 
   function handleOpenModal(currentIdMeal) {
-    setcurrIdMeal(currentIdMeal);
+    setCurrIdMeal(currentIdMeal);
     setModalIsOpen(true);
   }
 
   function handleCloseModal() {
-    setcurrIdMeal(null);
+    setCurrIdMeal(null);
     setModalIsOpen(false);
   }
 
