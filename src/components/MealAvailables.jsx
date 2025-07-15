@@ -4,7 +4,7 @@ function Meal({ onOpenModal, mealThumb, mealTitle, mealId }) {
   return (
     <>
       <div
-        className="relative aspect-square border-slate-800 border-6  rounded-tr-md rounded-tl-md group text-center"
+        className="relative aspect-square border-slate-800 border-6 md:max-w-50 rounded-tr-md rounded-tl-md group text-center"
         onClick={() => onOpenModal(mealId)}
       >
         <img
